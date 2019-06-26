@@ -1,0 +1,16 @@
+{
+    "name": "root/dayspring-recorder",
+    "description": "Dayspring sound board recorder program",
+    "require": {
+        "jbirch8865/ftpclass": "dev-master",
+	"jbirch8865/twilio": "dev-master"
+    },
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Joel Birch",
+            "email": "jbirch88655@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
