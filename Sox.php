@@ -15,7 +15,6 @@ class sox {
         private $sox_analyze_stats_cmd = "/usr/bin/sox %s -n stats 2>&1";
         private $sox_analyze_stat_cmd = "/usr/bin/sox %s -n stat 2>&1";
 
-
         public $filetype;
         public $channels;
         public $samplerate;
