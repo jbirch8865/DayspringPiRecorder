@@ -44,12 +44,15 @@ try {
 		exit("No name given.  Please use option -n=example to specify a recording to check.");
 	}
 	echo shell_exec("php CheckRecordingVolume.php -n=".$name." -s=".$start_position);
+	echo $Recording->Get_Duration_In_Seconds();
+	echo ' duration ';
+	echo $start_position;
 	if($Recording->Get_Duration_In_Seconds() < $start_position)
 	{
 		@shell_exec("php FinalizeRecording.php -n=".$name);
 	}else
 	{
-		@shell_exec("echo 'php MonitorRecording.php -n=".$name." -s=".$next_start_position."' | at ".date("h:i A",strtotime("+1 minutes")));
+		@shell_exec("echo 'php MonitorRecording.php -n=".$name." -s=".$next_start_position."' | at ".date("h:i A",strtotime("+5 minutes")));
 	}
 } catch (\Exception $e)
 {

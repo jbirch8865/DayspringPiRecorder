@@ -43,7 +43,7 @@ try {
 	{
 		exit("No name given.  Please use option -n=example to specify a recording to check.");
 	}
-	if($Recording->Is_Recording_Volume_Good($start_position, 60))
+	if($Recording->Is_Recording_Volume_Good($start_position, 300))
 	{
 		shell_exec("echo ".date("H:i").' '.$name.' - Volume is good at '.$Recording->What_Is_My_Volume().' dbs. >> VolumeChecks.txt');
 	}else
