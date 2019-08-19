@@ -145,7 +145,7 @@ class Recording {
 		}
 	}
 
-	private function Am_I_Finished_Recording()
+	public function Am_I_Finished_Recording()
 	{
 		$value_to_return = true;  //Is this the best way to do this?
 		try{

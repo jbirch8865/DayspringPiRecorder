@@ -43,11 +43,8 @@ try {
 	{
 		exit("No name given.  Please use option -n=example to specify a recording to check.");
 	}
-	echo shell_exec("php CheckRecordingVolume.php -n=".$name." -s=".$start_position);
-	echo $Recording->Get_Duration_In_Seconds();
-	echo ' duration ';
-	echo $start_position;
-	if($Recording->Get_Duration_In_Seconds() < $start_position)
+	shell_exec("php CheckRecordingVolume.php -n=".$name." -s=".$start_position);
+	if($Recording->Am_I_Finished_Recording())
 	{
 		@shell_exec("php FinalizeRecording.php -n=".$name);
 	}else
