@@ -285,7 +285,7 @@ class Recording {
 	{
 		try {
 			$ftp = new ftpclass\FTP_Link;
-			$ftp->Upload_Single_File($this->filename.".wav",dirname(__FILE__)."/recordings/",".");
+			$ftp->Upload_Single_Raw_File($this->filename.".wav",dirname(__FILE__)."/recordings/",".");
 		} catch (BadIniFile $e)
 		{
 			throw new \Exception("FTP down.  Need to check the configuration ini file in the vendor/jbirch8865/ftpclass/src directory.");

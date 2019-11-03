@@ -1,0 +1,3 @@
+#!/bin/bash
+NOW=$(date +"%b-%d-%T")
+date +"%Y-%m-%d-%H"php StartRecording.php -l=65 -n=$NOW
